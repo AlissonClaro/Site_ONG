@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcerias | ONG A Esperança da Criança</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="social">
+            <a href="#">🌐</a>
+            <a href="#">📘</a>
+            <a href="#">🐦</a>
+        </div>
+        <div class="contact">
+            <span>Email: contato@ong.com</span>
+            <span>Telefone: (88) 1234-5678</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="/source/logo_noBg.png" alt="Logo da ONG"></a>
+        </div>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/projetos.html">Projetos</a>
+            <a href="/eventos.html">Eventos</a>
+            <a href="#">Blog</a>
+            <a href="/parcerias.html" class="active">Parcerias</a>
+            <a href="doacao.html" class="btn-doar">💙 DOE AGORA</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="slides">
+            <div class="slide active" style="background-image: url('/source/parcerias_hero.jpg');">
+                <div class="overlay">
+                    <h1>Junte-se a Nós</h1>
+                    <p>Empresas e pessoas unidas por um mesmo propósito: transformar vidas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <h2>Nossas Parcerias</h2>
+        <p>Graças às nossas parcerias, conseguimos ampliar nosso alcance e impactar ainda mais vidas. Juntos, somos mais
+            fortes!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 A Esperança da Criança. Todos os direitos reservados.</p>
+    </footer>
+    <a href="doacao.html" class="float-donate">💙 Doe Agora</a>
+
+    <script>
+        // ======= EFEITO DE REVELAÇÃO AO ROLAR =======
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.reveal');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+</body>

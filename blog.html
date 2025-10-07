@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | ONG A Esperança da Criança</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= TOPO ======= -->
+    <div class="top-bar">
+        <div class="social">
+            <a href="#">🌐</a>
+            <a href="#">📘</a>
+            <a href="#">🐦</a>
+        </div>
+        <div class="contact">
+            <span>Email: contato@ong.com</span>
+            <span>Telefone: (88) 1234-5678</span>
+        </div>
+    </div>
+
+    <!-- ======= HEADER ======= -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="/source/logo_noBg.png" alt="Logo da ONG"></a>
+        </div>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/projetos.html">Projetos</a>
+            <a href="/eventos.html">Eventos</a>
+            <a href="/blog.html" class="active">Blog</a>
+            <a href="/parcerias.html">Parcerias</a>
+            <a href="doacao.html" class="btn-doar">💙 DOE AGORA</a>
+        </nav>
+    </header>
+
+    <!-- ======= HERO ======= -->
+    <section class="hero">
+        <div class="slides">
+            <div class="slide active" style="background-image: url('/source/blog_hero.jpg');">
+                <div class="overlay">
+                    <h1>Blog da Esperança</h1>
+                    <p>Histórias, inspirações e notícias sobre nossos projetos e conquistas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= CONTEÚDO ======= -->
+    <section class="sobre">
+        <h2>Últimas Publicações</h2>
+        <p>Fique por dentro das ações, eventos e histórias que inspiram o nosso trabalho.</p>
+
+        <div class="cards">
+            <div class="card">
+                <img src="/source/blog1.jpg" alt="Post 1">
+                <h3>Educação que Transforma</h3>
+                <p>Conheça a história de Maria, uma jovem que mudou seu destino com o apoio dos nossos projetos
+                    educacionais.</p>
+                <a href="#" class="btn-secondary">Ler mais</a>
+            </div>
+            <div class="card">
+                <img src="/source/blog2.jpg" alt="Post 2">
+                <h3>Voluntários que Inspiram</h3>
+                <p>Descubra como pessoas comuns estão fazendo a diferença nas comunidades que atendemos.</p>
+                <a href="#" class="btn-secondary">Ler mais</a>
+            </div>
+            <div class="card">
+                <img src="/source/blog3.jpg" alt="Post 3">
+                <h3>Um Futuro Mais Brilhante</h3>
+                <p>Relatório semestral mostra o impacto positivo das nossas ações e parcerias sociais.</p>
+                <a href="#" class="btn-secondary">Ler mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer>
+        <p>&copy; 2025 A Esperança da Criança. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE -->
+    <a href="doacao.html" class="float-donate">💙 Doe Agora</a>
+
+    <script>
+        // ======= EFEITO DE REVELAÇÃO AO ROLAR =======
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.reveal');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+
+</body>
+
+</html>

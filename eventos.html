@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos | ONG A Esperança da Criança</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- TOPO -->
+  <div class="top-bar">
+    <div class="social">
+      <a href="#">🌐</a>
+      <a href="#">📘</a>
+      <a href="#">🐦</a>
+    </div>
+    <div class="contact">
+      <span>Email: contato@ong.com</span>
+      <span>Telefone: (88) 1234-5678</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="/source/logo_noBg.png" alt="Logo da ONG"></a>
+    </div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/sobre.html">Sobre</a>
+      <a href="/projetos.html">Projetos</a>
+      <a href="/eventos.html" class="active">Eventos</a>
+      <a href="#">Blog</a>
+      <a href="/parcerias.html">Parcerias</a>
+      <a href="doacao.html" class="btn-doar">💙 DOE AGORA</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('/source/evento_hero.jpg');">
+        <div class="overlay">
+          <h1>Participe dos Nossos Eventos</h1>
+          <p>Juntos, celebramos a solidariedade e espalhamos esperança.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <section class="sobre">
+    <h2>Próximos Eventos</h2>
+    <p>Fique por dentro das ações e atividades que promovem o bem.</p>
+
+    <div class="cards">
+      <div class="card">
+        <img src="/source/evento1.jpg" alt="Evento 1">
+        <h3>Corrida da Esperança</h3>
+        <p>Um evento esportivo para arrecadar fundos e incentivar hábitos saudáveis.</p>
+      </div>
+      <div class="card">
+        <img src="/source/evento2.jpg" alt="Evento 2">
+        <h3>Dia da Solidariedade</h3>
+        <p>Uma tarde de oficinas, doações e música para todas as idades.</p>
+      </div>
+      <div class="card">
+        <img src="/source/evento3.jpg" alt="Evento 3">
+        <h3>Festival das Crianças</h3>
+        <p>Brincadeiras, teatro e lanche solidário para crianças em vulnerabilidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 A Esperança da Criança. Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="doacao.html" class="float-donate">💙 Doe Agora</a>
+
+  <script>
+    // ======= EFEITO DE REVELAÇÃO AO ROLAR =======
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.reveal');
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+
+</html>

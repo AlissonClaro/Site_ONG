@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ONG Nova Esperança</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>ONG A Esperança da Criança</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- ======= TOPO ======= -->
@@ -25,16 +27,16 @@
   <!-- ======= HEADER ======= -->
   <header>
     <div class="logo">
-        <a href="index.html">
-            <img src="/source/logo_noBg.png" alt="Logo da ONG">
-        </a>
+      <a href="index.html">
+        <img src="/source/logo_noBg.png" alt="Logo da ONG">
+      </a>
     </div>
 
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Sobre</a>
-      <a href="#">Projetos</a>
-      <a href="#">Eventos</a>
+      <a href="/index.html" class="active">Home</a>
+      <a href="/sobre.html">Sobre</a>
+      <a href="/projetos.html">Projetos</a>
+      <a href="/eventos.html">Eventos</a>
       <a href="#">Blog</a>
       <a href="#">Parcerias</a>
       <a href="#" class="btn-doar">💙 DOE AGORA</a>
@@ -58,7 +60,8 @@
       <div class="slide" style="background-image: url('/source/img_carrol2.jpg');">
         <div class="overlay">
           <h1>Esperança para Quem Precisa</h1>
-          <p>Doações financeiras e em material são bem-vindas. Usamos plataformas seguras para arrecadação e publicamos relatórios mensais.</p>
+          <p>Doações financeiras e em material são bem-vindas. Usamos plataformas seguras para arrecadação e publicamos
+            relatórios mensais.</p>
           <div class="hero-buttons">
             <a href="#" class="btn-primary">Doe Agora</a>
             <a href="#" class="btn-secondary">Nossos Projetos</a>
@@ -105,15 +108,28 @@
 
   <!-- ======= RODAPÉ ======= -->
   <footer>
-    <p>&copy; 2025 ONG Nova Esperança. Todos os direitos reservados.</p>
+    <p>&copy; 2025 A Esperança da Criança. Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
 
 
-    <!-- BOTÃO FLUTUANTE DOE AGORA -->
+  <!-- BOTÃO FLUTUANTE DOE AGORA -->
   <a href="doacao.html" class="float-donate">💙 Doe Agora</a>
+  <script>
+    // ======= EFEITO DE REVELAÇÃO AO ROLAR =======
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
 
+    const hiddenElements = document.querySelectorAll('.reveal');
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>
 
 </body>
+
 </html>

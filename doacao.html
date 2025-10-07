@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doe Agora - ONG Esperança Viva</title>
+  <title>Doe Agora - ONG A Esperança da Criança</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="doacao-body">
 
   <header>
     <div class="logo">
-        <a href="index.html">
-            <img src="/source/logo_noBg.png" alt="Logo da ONG">
-        </a>
+      <a href="index.html">
+        <img src="/source/logo_noBg.png" alt="Logo da ONG">
+      </a>
     </div>
     <div class="header-right">
       <div class="menu-icon">&#9776;</div>
@@ -49,7 +51,23 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 ONG Esperança Viva - Todos os direitos reservados.</p>
+    <p>&copy; 2025 ONG A Esperança da Criança. - Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    // ======= EFEITO DE REVELAÇÃO AO ROLAR =======
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.reveal');
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>
+
 </body>
+
 </html>

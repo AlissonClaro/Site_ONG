@@ -393,7 +393,7 @@ footer {
 }
 
 .endereco .btn-primary {
-  background: #5dad
+  background: #5dad;
 
   /* EFEITOS */
   .rotate-vert-left {
@@ -565,3 +565,101 @@ footer {
       transform: translateY(0);
     }
   }
+
+  /* ======= SCROLL REVEAL (EFEITO AO ROLAR) ======= */
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  /* ======= MAPA FULL WIDTH RESPONSIVO ======= */
+  .mapa-section {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .mapa-section h2 {
+    margin-bottom: 10px;
+  }
+
+  .mapa-section p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+
+  .map-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  }
+
+  .mapa-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .mapa-img:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* ===== MAPA ===== */
+.mapa {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f7faff;
+}
+
+.mapa h2 {
+  font-size: 2.3rem;
+  color: #1b2b4b;
+  margin-bottom: 15px;
+}
+
+.mapa p {
+  color: #4a4a4a;
+  margin-bottom: 40px;
+}
+
+.mapa-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.mapa-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.mapa-container img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== ANIMAÇÃO DE FLUIDEZ (REVEAL) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

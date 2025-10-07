@@ -41,7 +41,7 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero reveal>
         <div class="slides">
             <div class="slide active" style="background-image: url('/source/sobre_hero.jpg');">
                 <div class="overlay">
@@ -53,7 +53,7 @@
     </section>
 
     <!-- CONTEÚDO -->
-    <section class="sobre">
+    <section class="sobre reveal">
         <h2>Nossa História</h2>
         <p>Fundada em 2010, a ONG A Esperança da Criança nasceu do sonho de transformar realidades por meio da educação,
             da solidariedade e do cuidado.</p>
@@ -78,7 +78,7 @@
     </section>
 
     <!-- LOCALIZAÇÃO -->
-    <section class="sobre">
+    <section class="sobre reveal">
         <h2>Onde Estamos</h2>
         <p>Venha nos visitar e conhecer de perto o nosso trabalho.</p>
 
@@ -118,6 +118,28 @@
 
         const hiddenElements = document.querySelectorAll('.reveal');
         hiddenElements.forEach((el) => observer.observe(el));
+
+        <!-- ======= SCRIPT ======= -->
+
+        // Animação de rolagem (reveal)
+        window.addEventListener("scroll", function () {
+            const reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 150;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        });
+
+        // Forçar ativação inicial (para o topo da página)
+        window.dispatchEvent(new Event('scroll'));
+
     </script>
 
 </body>

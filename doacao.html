@@ -21,7 +21,7 @@
     </div>
   </header>
 
-  <section class="doacao-container">
+  <section class="doacao-container reveal">
     <h1>💙 Faça sua Doação</h1>
     <p>Sua contribuição ajuda a transformar vidas e construir um futuro melhor.</p>
 
@@ -66,6 +66,26 @@
 
     const hiddenElements = document.querySelectorAll('.reveal');
     hiddenElements.forEach((el) => observer.observe(el));
+
+    // Animação de rolagem (reveal)
+    window.addEventListener("scroll", function() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    });
+
+    // Forçar ativação inicial (para o topo da página)
+    window.dispatchEvent(new Event('scroll'));
+
   </script>
 
 </body>

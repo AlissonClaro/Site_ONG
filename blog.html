@@ -41,7 +41,7 @@
     </header>
 
     <!-- ======= HERO ======= -->
-    <section class="hero">
+    <section class="hero reveal>
         <div class="slides">
             <div class="slide active" style="background-image: url('/source/blog_hero.jpg');">
                 <div class="overlay">
@@ -53,7 +53,7 @@
     </section>
 
     <!-- ======= CONTEÚDO ======= -->
-    <section class="sobre">
+    <section class="sobre reveal">
         <h2>Últimas Publicações</h2>
         <p>Fique por dentro das ações, eventos e histórias que inspiram o nosso trabalho.</p>
 
@@ -100,6 +100,26 @@
 
         const hiddenElements = document.querySelectorAll('.reveal');
         hiddenElements.forEach((el) => observer.observe(el));
+
+        // Animação de rolagem (reveal)
+    window.addEventListener("scroll", function() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    });
+
+    // Forçar ativação inicial (para o topo da página)
+    window.dispatchEvent(new Event('scroll'));
+
     </script>
 
 </body>

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -44,13 +46,13 @@
 
     <!-- ======= HERO ======= -->
     <section class="hero reveal>
-        <div class="slides">
-            <div class="slide active" style="background-image: url('/source/blog_hero.jpg');">
-                <div class="overlay">
-                    <h1>Blog da Esperança</h1>
-                    <p>Histórias, inspirações e notícias sobre nossos projetos e conquistas.</p>
-                </div>
+        <div class=" slides">
+        <div class="slide active" style="background-image: url('/source/blogsDev.jpg');">
+            <div class="overlay">
+                <h1>Blog da Esperança</h1>
+                <p>Histórias, inspirações e notícias sobre nossos projetos e conquistas.</p>
             </div>
+        </div>
         </div>
     </section>
 
@@ -104,26 +106,25 @@
         hiddenElements.forEach((el) => observer.observe(el));
 
         // Animação de rolagem (reveal)
-    window.addEventListener("scroll", function() {
-      const reveals = document.querySelectorAll(".reveal");
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveals[i].getBoundingClientRect().top;
-        const revealPoint = 150;
+        window.addEventListener("scroll", function () {
+            const reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 150;
 
-        if (revealTop < windowHeight - revealPoint) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    });
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        });
 
-    // Forçar ativação inicial (para o topo da página)
-    window.dispatchEvent(new Event('scroll'));
+        // Forçar ativação inicial (para o topo da página)
+        window.dispatchEvent(new Event('scroll'));
 
     </script>
-
 </body>
 
 </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nós | ONG A Esperança da Criança</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- TOPO -->
+    <div class="top-bar">
+        <div class="social">
+            <a href="#">🌐</a>
+            <a href="#">📘</a>
+            <a href="#">🐦</a>
+        </div>
+        <div class="contact">
+            <span>Email: contato@ong.com</span>
+            <span>Telefone: (88) 1234-5678</span>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="/source/logo_noBg.png" alt="Logo da ONG">
+            </a>
+        </div>
+
+        <!-- Menu Check -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="projetos.html" class="active">Projetos</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="blog.html">Blog</a>
+            <a href="parcerias.html">Parcerias</a>
+            <a href="doacao.html" class="btn-doar">💙 DOE AGORA</a>
+        </nav>
+    </header>
+
+
+
+    <!-- HERO -->
+    <section class="hero reveal>
+        <div class=" slides">
+        <div class="slide active" style="background-image: url('/source/quemSomosDev.png');">
+            <div class="overlay">
+                <h1>Quem Somos</h1>
+                <p>Uma ONG movida pelo amor e pelo compromisso com o futuro das crianças.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO -->
+    <section class="sobre reveal">
+        <h2>Nossa História</h2>
+        <p>Fundada em 2010, a ONG A Esperança da Criança nasceu do sonho de transformar realidades por meio da educação,
+            da solidariedade e do cuidado.</p>
+
+        <div class="cards">
+            <div class="card">
+                <img src="/source/cri_cards1.jpg" alt="Missão">
+                <h3>Missão</h3>
+                <p>Promover dignidade e oportunidades para crianças e famílias em situação de vulnerabilidade.</p>
+            </div>
+            <div class="card">
+                <img src="/source/cri_cards2.jpg" alt="Visão">
+                <h3>Visão</h3>
+                <p>Ser referência nacional em programas sociais voltados à infância e juventude.</p>
+            </div>
+            <div class="card">
+                <img src="/source/cri_cards3.jpg" alt="Valores">
+                <h3>Valores</h3>
+                <p>Amor, respeito, transparência e responsabilidade social guiam nossas ações.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section class="sobre reveal">
+        <h2>Onde Estamos</h2>
+        <p>Venha nos visitar e conhecer de perto o nosso trabalho.</p>
+
+        <div class="cards" style="justify-content: center;">
+            <div class="card_map" style="max-width: 100%; margin-bottom: 20px">
+                <div style="width: 100%; height: 400px; border-radius: 15px; overflow: hidden;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.068246266011!2d-49.93675712382314!3d-22.22030727974437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf67f437f1b0d7%3A0x3d678f6ce40bfa26!2sR.%20Jos%C3%A9%20Ger%C3%B4nimo%20P%C3%A9res%2C%20630%20-%20Jardim%20Continental%2C%20Mar%C3%ADlia%20-%20SP%2C%2017524-220!5e0!3m2!1spt-BR!2sbr!4v1728253184000!5m2!1spt-BR!2sbr"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <h3>Endereço</h3>
+                <p>📍 R. José Gerônimo Péres, 630 - Jardim Continental, Marília - SP, 17524-220</p>
+                <a href="https://www.google.com/maps/place/R.+Jos%C3%A9+Ger%C3%B4nimo+P%C3%A9res,+630+-+Jardim+Continental,+Mar%C3%ADlia+-+SP,+17524-220"
+                    target="_blank" rel="noopener" class="btn-primary">Abrir no Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 A Esperança da Criança. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="doacao.html" class="float-donate">💙 Doe Agora</a>
+
+    <script>
+        // ======= EFEITO DE REVELAÇÃO AO ROLAR =======
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.reveal');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        <!-- ======= SCRIPT ======= -->
+
+        // Animação de rolagem (reveal)
+        window.addEventListener("scroll", function () {
+            const reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 150;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        });
+
+        // Forçar ativação inicial (para o topo da página)
+        window.dispatchEvent(new Event('scroll'));
+
+    </script>
+</body>
+
+</html>

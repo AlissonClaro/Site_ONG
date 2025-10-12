@@ -29,27 +29,27 @@
   </div>
 
   <!-- ======= HEADER ======= -->
-<header>
-  <div class="logo">
-    <a href="/html/index.html">
-      <img src="/source/logo_noBg.png" alt="Logo da ONG">
-    </a>
-  </div>
+  <header>
+    <div class="logo">
+      <a href="/html/index.html">
+        <img src="/source/logo_noBg.png" alt="Logo da ONG">
+      </a>
+    </div>
 
-  <!-- Menu Check -->
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <!-- Menu Check -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
 
-  <nav>
-    <a href="/html/index.html">Home</a>
-    <a href="/html/sobre.html">Sobre</a>
-    <a href="/html/projetos.html" class="active">Projetos</a>
-    <a href="/html/eventos.html">Eventos</a>
-    <a href="/html/blog.html">Blog</a>
-    <a href="/html/parcerias.html">Parcerias</a>
-    <a href="/html/doacao.html" class="btn-doar">💙 DOE AGORA</a>
-  </nav>
-</header>
+    <nav>
+      <a href="/html/index.html">Home</a>
+      <a href="/html/sobre.html">Sobre</a>
+      <a href="/html/projetos.html" class="active">Projetos</a>
+      <a href="/html/eventos.html">Eventos</a>
+      <a href="/html/blog.html">Blog</a>
+      <a href="/html/parcerias.html">Parcerias</a>
+      <a href="/html/doacao.html" class="btn-doar">💙 DOE AGORA</a>
+    </nav>
+  </header>
 
 
 
@@ -126,7 +126,7 @@
 
 
   <!-- BOTÃO FLUTUANTE DOE AGORA -->
-  <a href="doacao.html" class="float-donate">💙 Doe Agora</a>
+  <a href="/html/doacao.html" class="float-donate">💙 Doe Agora</a>
   <script>
     // ======= EFEITO DE REVELAÇÃO AO ROLAR =======
     const observer = new IntersectionObserver((entries) => {
@@ -159,7 +159,25 @@
     // Forçar ativação inicial (para o topo da página)
     window.dispatchEvent(new Event('scroll'));
 
+    // ======= CARROSSEL AUTOMÁTICO =======
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Troca a cada 5 segundos
+    setInterval(nextSlide, 5000);
   </script>
+
 </body>
 
 </html>
